@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MovieGoer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/background.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="background">
+    <div class="login-container glass">
+        <h1>Login</h1>
+        <form action="/auth/login" method="POST">
+            <label for="username">Username:</label> <!-- Updated field ID and name -->
+            <input type="text" id="username" name="username" required> <!-- Updated name -->
+
+            <label for="password">Password:</label> <!-- Updated field ID and name -->
+            <input type="password" id="password" name="password" required> <!-- Updated name -->
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        
+        <div class="centered">
+            <a href="/register">Don't have an account? Register now</a>
+        </div>
+    </div>   
+
+    {{#if message }}
+        <h4 class="alert alert-danger">{{message}}</h4>
+    {{/if}}
+</body>
+</html>

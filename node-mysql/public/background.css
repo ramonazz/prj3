@@ -1,0 +1,137 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+.background {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #e74c3c, #f39c12, #e74c3c); /* Movie-inspired red and gold gradient */
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Slightly rounder corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for depth */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for modern look */
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50; /* Darker text for the header */
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+}
+
+.container input[type="number"],
+.container input[type="date"],
+.container input[type="text"],
+.login-container input[type="date"],
+.login-container input[type="tel"], 
+.login-container input[type="email"], 
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="submit"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners for inputs */
+    outline: none;
+    background: transparent;
+    backdrop-filter: blur(10px); /* Reduced blur for cleaner look */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.container input[type="submit"],
+.login-container input[type="submit"] {
+    cursor: pointer;
+    background-color: #e74c3c; /* Red background for button */
+    color: white;
+    border-color: #e74c3c;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.container input[type="submit"]:hover,
+.login-container input[type="submit"]:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.centered {
+    text-align: center;
+    color: black;
+}
+
+.centered a:visited {
+    color: black;
+}
+
+.centered a:hover {
+    text-decoration: underline;
+    color: #e74c3c; /* Red underline for links */
+}
+
+.alert-danger {
+    font-size: 14px; /* Adjust the font size as needed */
+    width: 100%; /* Adjust the width as needed */
+    padding: 12px; /* Add padding to create space around the text */
+    border: 1px solid #d9534f; /* Add a border */
+    border-radius: 4px; /* Add rounded corners */
+    background-color: #f2dede; /* Change the background color */
+    color: #a94442; /* Change the text color */
+}
+
+select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners for select */
+    outline: none;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners for textarea */
+    outline: none;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    resize: vertical; /* Allow vertical resizing of the textarea */
+    min-height: 120px; /* Set a minimum height */
+    font-family: 'Poppins', sans-serif; /* Use a custom font */
+}
